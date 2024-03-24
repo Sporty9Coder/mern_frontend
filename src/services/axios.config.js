@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseURL="http://localhost:1000";
+// const baseURL="http://localhost:1000";
+const baseURL="https://mern-project-wnyo.onrender.com"
 
 const publicAxios=axios.create({baseURL});
 
