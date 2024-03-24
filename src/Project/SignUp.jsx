@@ -21,7 +21,7 @@ export default function SignUp() {
     async function signUp()
     {
         // alert("hello");
-        const url="http://localhost:1000/users/signup";
+        const url="https://mern-project-wnyo.onrender.com/users/signup";
         const serverMsg=await axios.post(url,signUpobj);
         if(serverMsg.data.status===true)
         {
