@@ -27,12 +27,10 @@ export default function Login() {
             localStorage.setItem("access_token",serverMsg.data.jtoken);
             if(serverMsg.data.msg==="Grower")
             {
-              alert(serverMsg.data.msg);
               navigate("/growerdash");
             }
             else if(serverMsg.data.msg==="Consumer")
             {
-              alert(serverMsg.data.msg);
               navigate("/consumerdash");
             }
         }

@@ -21,7 +21,6 @@ function doUpdateUserObj(event)
     const {name,value}=event.target;
     if(name==="pic")
     {
-        alert(JSON.stringify(event.target.files[0]));
         setUserObj({...userobj,[name]:event.target.files[0]})
         setPrevImg("http://localhost:1000/uploads/"+event.target.files[0]);
     }
@@ -44,7 +43,6 @@ async function doSaveWithAxios()
 
     if(serverMsg.data.status===true)
     {
-        alert("signed in");
         setPrevImg("https://mern-project-wnyo.onrender.com/uploads/"+serverMsg.data.res.picname);
     }
     else{

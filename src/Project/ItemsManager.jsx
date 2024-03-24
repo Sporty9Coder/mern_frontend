@@ -29,7 +29,6 @@ export default function ItemsManager() {
 
     async function deleteItem(id)
     {
-      alert(id);
       if(window.confirm("Are you sure you want to delete this item?")===false)
       {
         return;
@@ -43,7 +42,6 @@ export default function ItemsManager() {
       {
         if(serverMsg.data.response===1)
         {
-          alert(serverMsg.data.msg);
           setArrObj(leftItemsArry);
         }
         else {

@@ -24,7 +24,6 @@ function doUpdateGrowerObj(event)
     if(name==="aadharpic")
     {
         console.log(event.target.files[0]);
-        alert(JSON.stringify(event.target.files[0]));
         setGrowerobj({...growerobj,[name]:event.target.files[0]})
         // setPrevImg("C:/Users/LENOVO/Your team Dropbox/Rehan Bansal/NodeJS-Rehan/pics"+event.target.files[0].name);
     }
@@ -51,7 +50,6 @@ async function doSaveWithAxios()
 
     if(serverMsg.data.status===true)
     {
-        alert("grower added");
         setPrevImg("https://mern-project-wnyo.onrender.com/uploads/"+serverMsg.data.res.picpath);
     }
     else{
