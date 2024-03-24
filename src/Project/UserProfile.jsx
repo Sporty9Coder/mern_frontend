@@ -34,7 +34,7 @@ function doUpdateUserObj(event)
 async function doSaveWithAxios()
 {
     console.log(userobj);
-    const url="http://localhost:1000/users/add-profile";
+    const url="https://mern-project-wnyo.onrender.com/users/add-profile";
     const formdata=new FormData();
     for(var props in userobj)
     {
@@ -45,7 +45,7 @@ async function doSaveWithAxios()
     if(serverMsg.data.status===true)
     {
         alert("signed in");
-        setPrevImg("http://localhost:1000/uploads/"+serverMsg.data.res.picname);
+        setPrevImg("https://mern-project-wnyo.onrender.com/uploads/"+serverMsg.data.res.picname);
     }
     else{
         alert(serverMsg.data.msg+" "+serverMsg.data.err);
@@ -55,7 +55,7 @@ async function doSaveWithAxios()
 async function dofetch()
 {
   // alert(userobj.email);
-  const url=`http://localhost:1000/users/fetch-data?email=${userobj.email}`;
+  const url=`https://mern-project-wnyo.onrender.com/users/fetch-data?email=${userobj.email}`;
   const servermsg=await axios.get(url);
         // alert(JSON.stringify(servermsg.data.res));
         console.log(servermsg);
@@ -64,7 +64,7 @@ async function dofetch()
             console.log(servermsg.data.res);
             // alert(servermsg.data.res.picname);
             setUserObj(servermsg.data.res);
-            setPrevImg("http://localhost:1000/uploads/"+servermsg.data.res.picname);
+            setPrevImg("https://mern-project-wnyo.onrender.com/uploads/"+servermsg.data.res.picname);
             // alert(JSON.stringify(userobj));
         }
         else {
@@ -74,7 +74,7 @@ async function dofetch()
 
 async function doUpdateWithAxios()
 {
-  var url="http://localhost:1000/users/update-user";
+  var url="https://mern-project-wnyo.onrender.com/users/update-user";
   const formdata=new FormData();
     for(var props in userobj)
     {
@@ -86,7 +86,7 @@ async function doUpdateWithAxios()
     {
         alert("updated successfully");
         setUserObj(serverMsg.data.res);
-        setPrevImg("http://localhost:1000/uploads/"+serverMsg.data.res.picname);
+        setPrevImg("https://mern-project-wnyo.onrender.com/uploads/"+serverMsg.data.res.picname);
     }
     else{
         alert(serverMsg.data.err);

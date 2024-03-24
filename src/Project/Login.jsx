@@ -19,7 +19,7 @@ export default function Login() {
 
     async function doLogin()
     {
-        const url="http://localhost:1000/users/login"
+        const url="https://mern-project-wnyo.onrender.com/users/login"
         const serverMsg=await axios.post(url,obj);
         if(serverMsg.data.status===true)
         {

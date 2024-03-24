@@ -52,7 +52,7 @@ async function doSaveWithAxios()
     if(serverMsg.data.status===true)
     {
         alert("grower added");
-        setPrevImg("http://localhost:1000/uploads/"+serverMsg.data.res.picpath);
+        setPrevImg("https://mern-project-wnyo.onrender.com/uploads/"+serverMsg.data.res.picpath);
     }
     else{
         alert(serverMsg.data.msg+" "+serverMsg.data.err);
@@ -71,7 +71,7 @@ async function dofetch()
             console.log(servermsg.data.res);
             // alert(servermsg.data.res.picname);
             setGrowerobj(servermsg.data.res);
-            setPrevImg("http://localhost:1000/uploads/"+servermsg.data.res.picpath);
+            setPrevImg("https://mern-project-wnyo.onrender.com/uploads/"+servermsg.data.res.picpath);
             // alert(JSON.stringify(userobj));
         }
         else {
@@ -93,7 +93,7 @@ async function doUpdateWithAxios()
     {
         alert("updated successfully");
         setGrowerobj(serverMsg.data.res);
-        setPrevImg("http://localhost:1000/uploads/"+serverMsg.data.res.picpath);
+        setPrevImg("https://mern-project-wnyo.onrender.com/uploads/"+serverMsg.data.res.picpath);
     }
     else{
         alert(serverMsg.data.err);

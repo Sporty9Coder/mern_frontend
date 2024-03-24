@@ -162,7 +162,7 @@ function AllDetails(props)
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75">
       <div className="bg-white p-8 rounded-lg shadow-lg min-w-lg">
         <div className="text-center mb-4">
-          <img src={"http://localhost:1000/uploads/"+props.detailary.picpath} alt="Grower" className="w-40 h-40 mx-auto rounded-full" />
+          <img src={"https://mern-project-wnyo.onrender.com/uploads/"+props.detailary.picpath} alt="Grower" className="w-40 h-40 mx-auto rounded-full" />
           <h2 className="text-2xl font-bold mt-4 text-gray-800">{props.detailary.name}</h2>
         </div>
         <div className="text-left">
