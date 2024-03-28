@@ -141,15 +141,21 @@ export default function ItemsManager() {
         </div>
     </div>
     <div className='flex'>
-    {
+    <div className='flex-col'>
+      {
         mArry.map(getTable)
-    }
-    {
+      }
+    </div>
+    <div className='flex-col'>
+      {
         fArry.map(getTable)
-    }
-    {
+      }
+    </div>
+    <div className='flex-col'>
+      {
         vArry.map(getTable)
-    }
+      }
+    </div>
     </div>
     </>
   )
