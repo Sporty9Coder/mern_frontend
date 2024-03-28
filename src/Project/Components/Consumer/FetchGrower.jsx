@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { fetchCity,findGrower, fullGrowerDetails } from '../services/user-controller'
+import { fetchCity,findGrower, fullGrowerDetails } from '../../../services/user-controller'
 
 function ItemList(props)
 {

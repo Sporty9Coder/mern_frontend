@@ -1,15 +1,15 @@
 import React from 'react';
 import {Routes,Route, useLocation} from 'react-router-dom';
-import SignUp from './SignUp.jsx'
-import Login from './Login.jsx'
-import GrowerDash from './GrowerDash.jsx';
-import ConsumerDash from './ConsumerDash.jsx';
-import GrowerProfile from './GrowerProfile.jsx'
-import AvailProduct from './AvailProduct.jsx'
-import ItemsManager from './ItemsManager.jsx'
-import StartPage from './StartPage.jsx';
-import PageNotFound from './PageNotFound.jsx'
-import FetchGrower from './FetchGrower.jsx';
+import SignUp from '../Others/SignUp.jsx'
+import Login from '../Others/Login.jsx'
+import GrowerDash from '../Grower/GrowerDash.jsx';
+import ConsumerDash from '../Consumer/ConsumerDash.jsx';
+import GrowerProfile from '../Grower/GrowerProfile.jsx'
+import AvailProduct from '../Grower/AvailProduct.jsx'
+import ItemsManager from '../Grower/ItemsManager.jsx'
+import StartPage from '../Others/StartPage.jsx';
+import PageNotFound from '../Others/PageNotFound.jsx'
+import FetchGrower from '../Consumer/FetchGrower.jsx';
 import {useNavigate,Link, useSearchParams} from 'react-router-dom';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react';

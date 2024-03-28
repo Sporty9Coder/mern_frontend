@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { baseURL } from '../services/axios.config';
+import { baseURL } from '../../../services/axios.config';
 
 export default function ItemsManager() {
     const [arrObj,setArrObj]=useState([{}]);

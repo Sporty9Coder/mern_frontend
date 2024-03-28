@@ -21,14 +21,8 @@ import NavBar from './Bootstrap/NavBar'
 import Profile from './Bootstrap/Profile';
 import JSG from './Tailwindd/JSG';
 import CURD from './Axioss/CURD';
-import UserProfile from './Project/UserProfile';
-import SignUp from './Project/SignUp';
-import GrowerProfile from './Project/GrowerProfile';
-import Login from './Project/Login';
-import AvailProduct from './Project/AvailProduct';
-import ItemsManager from './Project/ItemsManager';
 import TicTacToe from './TicTacToe/TicTacToe';
-import HomePage from './Project/HomePage';
+import HomePage from './Project/Components/Others/HomePage.jsx';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

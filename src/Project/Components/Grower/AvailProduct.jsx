@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import axios from 'axios';
-import { doPublishValidatetoken } from '../services/user-controller';
+import { doPublishValidatetoken } from '../../../services/user-controller';
 
 function ItemList(props)
 {
