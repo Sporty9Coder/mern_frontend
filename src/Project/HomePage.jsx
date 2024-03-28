@@ -95,6 +95,17 @@ export default function HomePage() {
           </Menu>
         </div>
       </div>}
+
+
+
+
+
+
+
+
+
+
+      
         <Routes>
           <Route path='/' element={<StartPage/>}></Route>
           <Route path='/gotosignup' element={<SignUp/>}></Route>
