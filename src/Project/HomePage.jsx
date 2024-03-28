@@ -40,7 +40,7 @@ export default function HomePage() {
     }    
 
     console.log(location);
-    const rendernavbar=location.pathname!=='/';
+    const rendernavbar=location.pathname!=='/'||location.pathname!=='/gotohome';
 
     return (
       <>
@@ -105,7 +105,7 @@ export default function HomePage() {
 
 
 
-      
+
         <Routes>
           <Route path='/' element={<StartPage/>}></Route>
           <Route path='/gotosignup' element={<SignUp/>}></Route>
