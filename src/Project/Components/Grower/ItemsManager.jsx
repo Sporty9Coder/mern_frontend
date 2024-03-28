@@ -3,7 +3,9 @@ import axios from 'axios'
 import { baseURL } from '../../../services/axios.config';
 
 export default function ItemsManager() {
-    const [arrObj,setArrObj]=useState([{}]);
+    const [mArry,setmArry]=useState([{}]);
+    const [fArry,setfArry]=useState([{}]);
+    const [vArry,setvArry]=useState([{}]);
     const [email,setEmail]=useState("");
     const [state,setState]=useState(false);
     // const [path,setPath]=useState("");
@@ -16,7 +18,18 @@ export default function ItemsManager() {
         // console.log(serverMsg.data);
         if(serverMsg.data.status===1)
         {
-            setArrObj(serverMsg.data.res);
+            const newmAry=serverMsg.data.res.filter((obj)=>obj.category==='Milk Product')
+            setmArry(newmAry);
+
+            const newfAry=serverMsg.data.res.filter((obj)=>obj.category==='Fruits')
+            setfArry(newfAry);
+
+            const newvAry=serverMsg.data.res.filter((obj)=>obj.category==='Vegetables')
+            setvArry(newvAry);
+
+            console.log(mArry);
+            console.log(fArry);
+            console.log(vArry);
             // alert(JSON.stringify(arrObj))
         }
         else if(serverMsg.data.status===2)
@@ -24,17 +37,17 @@ export default function ItemsManager() {
             alert(serverMsg.data.res);
         }
         else alert(serverMsg.data.err);
-        console.log(arrObj);
+        // console.log(arrObj);
     }
 
-    async function deleteItem(id)
+    async function deleteItem(id,category)
     {
       if(window.confirm("Are you sure you want to delete this item?")===false)
       {
         return;
       }
-      const itemobjArry=arrObj.filter((obj)=>obj._id===id);
-      const leftItemsArry=arrObj.filter((obj)=>obj._id!==id);
+      const itemobjArry=mArry.filter((obj)=>obj._id===id);
+      const leftItemsArry=mArry.filter((obj)=>obj._id!==id);
       const url=baseURL+"/users/delete-item";
       console.log(itemobjArry[0]);
       const serverMsg=await axios.post(url,itemobjArry[0]);
@@ -42,7 +55,18 @@ export default function ItemsManager() {
       {
         if(serverMsg.data.response===1)
         {
-          setArrObj(leftItemsArry);
+          if(category==="Milk Product")
+          {
+            setmArry(leftItemsArry);
+          }
+          else if(category==="Fruits")
+          {
+            setfArry(leftItemsArry);
+          }
+          else if(category==="Vegetables")
+          {
+            setvArry(leftItemsArry);
+          }
         }
         else {
           alert(serverMsg.data.msg);
@@ -74,9 +98,6 @@ export default function ItemsManager() {
           ObjId
         </th>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Email
-        </th>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Category
         </th>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -93,16 +114,13 @@ export default function ItemsManager() {
             {props._id}
         </td>
         <td class="px-6 py-4 whitespace-nowrap">
-            {props.email}
-        </td>
-        <td class="px-6 py-4 whitespace-nowrap">
             {props.category}
         </td>
         <td class="px-6 py-4 whitespace-nowrap">
             {props.item}
         </td>
         <td class="px-6 py-4 whitespace-nowrap">
-            {state&&<button type='button' class="btn btn-warning text-center p-1 pb-1" onClick={()=>{props.deletefx(props._id)}}>Delete</button>}
+            {state&&<button type='button' class="btn btn-warning text-center p-1 pb-1" onClick={()=>{props.deletefx(props._id,props.category)}}>Delete</button>}
         </td>
       </tr>
     </tbody>
@@ -122,9 +140,17 @@ export default function ItemsManager() {
             <button type='button' onClick={doFetch}>Fetch</button>
         </div>
     </div>
+    <div className='flex'>
     {
-        arrObj.map(getTable)
+        mArry.map(getTable)
     }
+    {
+        fArry.map(getTable)
+    }
+    {
+        vArry.map(getTable)
+    }
+    </div>
     </>
   )
 }
