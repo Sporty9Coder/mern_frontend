@@ -1,11 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {useNavigate,Link, useSearchParams} from 'react-router-dom';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react';
 
 export default function StartPage() {
 
-  const navigate=useNavigate();
+    const navigate=useNavigate();
+    const [scrolled,setScrolled]=useState();
+
+    useEffect(
+      ()=>{
+        function handlescroll()
+        {
+          const isScroll=window.scrollY>0;
+          setScrolled(isScroll); 
+        }
+
+        window.addEventListener('scroll',handlescroll);
+        return ()=>{
+        window.removeEventListener('scroll',handlescroll)
+        }
+      }
+    ,[]);
 
     function doSignUp()
     {
@@ -29,7 +45,7 @@ export default function StartPage() {
 
   return (
     <div>
-      <div className='fixed text-center font-medium pt-2 text-2xl flex w-screen h-24 bg-transparent text-white'>
+      <div className={`fixed text-center font-medium pt-2 text-2xl flex w-screen h-24 text-white ${scrolled?'bg-green-500 bg-opacity-80':'bg-amber-300 bg-opacity-30'}`}>
         <button className='ml-2 h-12 w-10 mt-2'>
           <img src="https://static.thenounproject.com/png/462023-200.png" alt="" />
         </button>

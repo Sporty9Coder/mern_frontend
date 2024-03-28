@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes,Route} from 'react-router-dom';
+import {Routes,Route, useLocation} from 'react-router-dom';
 import SignUp from './SignUp.jsx'
 import Login from './Login.jsx'
 import GrowerDash from './GrowerDash.jsx';
@@ -17,6 +17,7 @@ import { Fragment } from 'react';
 export default function HomePage() {    
 
   const navigate=useNavigate();
+  const location=useLocation();
 
     function doSignUp()
     {
@@ -38,9 +39,12 @@ export default function HomePage() {
       return classes.filter(Boolean).join(' ')
     }    
 
+    console.log(location);
+    const rendernavbar=location.pathname!=='/';
+
     return (
       <>
-      <div className='text-center font-medium pt-2 text-2xl flex w-screen h-[85px] bg-green-500 bg-opacity-80 text-white mb-5'>
+      {rendernavbar&&<div className='text-center font-medium pt-2 text-2xl flex w-screen h-[85px] bg-green-500 bg-opacity-80 text-white mb-5'>
         <button className='ml-2 h-12 w-10 mt-2'>
           <img src="https://static.thenounproject.com/png/462023-200.png" alt="" />
         </button>
@@ -90,7 +94,7 @@ export default function HomePage() {
             </Transition>
           </Menu>
         </div>
-      </div>
+      </div>}
         <Routes>
           <Route path='/' element={<StartPage/>}></Route>
           <Route path='/gotosignup' element={<SignUp/>}></Route>
