@@ -64,9 +64,12 @@ export default function ItemsManager() {
       {
         leftItemsArry=vArry.filter((obj)=>obj._id!==id);
       }
+
+      console.log(leftItemsArry);
       
       const url=baseURL+"/users/delete-item";
       const serverMsg=await axios.post(url,obj);
+      console.log(serverMsg.data.res);
       if(serverMsg.data.status===true)
       {
           if(category==="Milk Product")
