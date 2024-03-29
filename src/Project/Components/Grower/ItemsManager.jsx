@@ -90,13 +90,13 @@ export default function ItemsManager() {
     function ItemTable(props)
 {
   console.log(props.item);
-    /*return (
+    return (
       props.item.map(
         (str)=>{
           return(
             <tr>
         <td class="px-6 py-4 whitespace-nowrap">
-            {props.item}
+            {str}
         </td>
         <td class="px-6 py-4 whitespace-nowrap">
             {state&&<button type='button' class="btn btn-warning text-center p-1 pb-1" onClick={()=>{props.deletefx(props._id,props.category)}}>Delete</button>}
@@ -105,7 +105,7 @@ export default function ItemsManager() {
           )
         }
       )
-    )*/
+    )
 }
 
   return (
