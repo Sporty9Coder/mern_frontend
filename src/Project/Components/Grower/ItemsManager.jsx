@@ -90,22 +90,6 @@ export default function ItemsManager() {
     function ItemTable(props)
 {
     return (
-        <div class="overflow-x-auto container">
-  <table class="table-auto min-w-full divide-y divide-gray-200">
-    <thead class="bg-gray-50">
-      <tr>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Category
-        </th>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Item
-        </th>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Operations
-        </th>
-      </tr>
-    </thead>
-    <tbody class="bg-white divide-y divide-gray-200">
       <tr>
         <td class="px-6 py-4 whitespace-nowrap">
             {props.category}
@@ -117,9 +101,6 @@ export default function ItemsManager() {
             {state&&<button type='button' class="btn btn-warning text-center p-1 pb-1" onClick={()=>{props.deletefx(props._id,props.category)}}>Delete</button>}
         </td>
       </tr>
-    </tbody>
-  </table>
-</div>
     )
 }
 
@@ -135,21 +116,74 @@ export default function ItemsManager() {
         </div>
     </div>
     <div className='flex'>
-    <div className='flex-col'>
+    <div class="overflow-x-auto container">
+  <table class="table-auto min-w-full divide-y divide-gray-200">
+    <thead class="bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Category
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Item
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Operations
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
       {
         mArry.map(getTable)
       }
-    </div>
-    <div className='flex-col'>
+    </tbody>
+  </table>
+</div>
+   
+<div class="overflow-x-auto container">
+  <table class="table-auto min-w-full divide-y divide-gray-200">
+    <thead class="bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Category
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Item
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Operations
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
       {
         fArry.map(getTable)
       }
-    </div>
-    <div className='flex-col'>
+    </tbody>
+  </table>
+</div>
+
+<div class="overflow-x-auto container">
+  <table class="table-auto min-w-full divide-y divide-gray-200">
+    <thead class="bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Category
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Item
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Operations
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
       {
         vArry.map(getTable)
       }
-    </div>
+    </tbody>
+  </table>
+</div>
     </div>
     </>
   )

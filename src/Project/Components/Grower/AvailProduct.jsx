@@ -100,7 +100,7 @@ export default function AvailProduct() {
                 </div>
                 <div className="mb-6">
                     <label htmlFor="city" className="block font-semibold mb-2">City:</label>
-                    <input type="text" name="city" id="city" value={obj.city} className="block w-full px-4 py-2 rounded-md border border-gray-700 bg-white text-gray-800 focus:outline-none focus:border-indigo-500" onChange={doUpdate}/>
+                    <input type="text" name="city" id="city" value={obj.city} readOnly className="block w-full px-4 py-2 rounded-md border border-gray-700 bg-white text-gray-800 focus:outline-none focus:border-indigo-500" onChange={doUpdate}/>
                 </div>
                 <div>
                     <button type="button" className="w-32 py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700 rounded-md" onClick={()=>{
