@@ -89,11 +89,12 @@ export default function ItemsManager() {
 
     function ItemTable(props)
 {
-    return (
-      <tr>
-        <td class="px-6 py-4 whitespace-nowrap">
-            {props.category}
-        </td>
+  console.log(props.item);
+    /*return (
+      props.item.map(
+        (str)=>{
+          return(
+            <tr>
         <td class="px-6 py-4 whitespace-nowrap">
             {props.item}
         </td>
@@ -101,7 +102,10 @@ export default function ItemsManager() {
             {state&&<button type='button' class="btn btn-warning text-center p-1 pb-1" onClick={()=>{props.deletefx(props._id,props.category)}}>Delete</button>}
         </td>
       </tr>
-    )
+          )
+        }
+      )
+    )*/
 }
 
   return (
@@ -120,15 +124,15 @@ export default function ItemsManager() {
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
       <tr>
-        <th colSpan={2} class="px-6 py-3 text-center text-lg font-semibold text-black tracking-wider">
+        <th colSpan={2} class="px-6 py-3 text-center text-lg font-semibold text-green-600 bg-amber-500 bg-opacity-70 font-merriweather">
           Milk Products
         </th>
       </tr>
       <tr>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Item
+        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
+          Items
         </th>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
           Operations
         </th>
       </tr>
@@ -145,15 +149,15 @@ export default function ItemsManager() {
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
     <tr>
-        <th colSpan={2} class="px-6 py-3 text-center text-lg font-semibold text-black tracking-wider">
+        <th colSpan={2} class="px-6 py-3 text-center text-lg font-semibold text-green-600 bg-amber-500 bg-opacity-70 font-merriweather">
           Fruits
         </th>
       </tr>
       <tr>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Item
+        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
+          Items
         </th>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
           Operations
         </th>
       </tr>
@@ -170,15 +174,15 @@ export default function ItemsManager() {
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
     <tr>
-        <th colSpan={2} class="px-6 py-3 text-center text-lg font-semibold text-black tracking-wider">
+        <th colSpan={2} class="px-6 py-3 text-center text-lg font-semibold text-green-600 bg-amber-500 bg-opacity-70 font-merriweather">
           Vegetables
         </th>
       </tr>
       <tr>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Item
+        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
+          Items
         </th>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
           Operations
         </th>
       </tr>
