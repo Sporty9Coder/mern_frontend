@@ -121,6 +121,11 @@ export default function ItemsManager() {
     <thead class="bg-gray-50">
       <tr>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Milk Products
+        </th>
+      </tr>
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Category
         </th>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -142,6 +147,11 @@ export default function ItemsManager() {
 <div class="overflow-x-auto container">
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
+    <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Fruits
+        </th>
+      </tr>
       <tr>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Category
@@ -165,6 +175,11 @@ export default function ItemsManager() {
 <div class="overflow-x-auto container">
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
+    <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Vegetables
+        </th>
+      </tr>
       <tr>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Category
