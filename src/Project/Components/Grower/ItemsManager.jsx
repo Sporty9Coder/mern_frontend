@@ -79,7 +79,7 @@ export default function ItemsManager() {
           }
           else if(category==="Vegetables")
           {
-            setvArry([...leftItemsArry,serverMsg.data.res[0]]);
+            setvArry([...leftItemsArry,serverMsg.data.res]);
           }
       }
       else {
