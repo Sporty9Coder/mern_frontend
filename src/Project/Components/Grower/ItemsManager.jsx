@@ -96,10 +96,10 @@ export default function ItemsManager() {
         (str)=>{
           return(
             <tr>
-        <td class="px-6 py-4 whitespace-nowrap">
+        <td class="px-6 py-4 whitespace-nowrap w-1/2 text-center">
             {str}
         </td>
-        <td class="px-6 py-4 whitespace-nowrap">
+        <td class="px-6 py-4 whitespace-nowrap w-1/2 text-center">
             {state&&<button type='button' class="btn btn-warning text-center p-1 pb-1" onClick={()=>{props.deletefx(props._id,props.category)}}>Delete</button>}
         </td>
       </tr>
@@ -130,10 +130,10 @@ export default function ItemsManager() {
         </th>
       </tr>
       <tr>
-        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
+        <th colSpan={1} class="px-6 py-3 text-center text-lg font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
           Items
         </th>
-        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
+        <th colSpan={1} class="px-6 py-3 text-center text-lg font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
           Operations
         </th>
       </tr>
@@ -155,10 +155,10 @@ export default function ItemsManager() {
         </th>
       </tr>
       <tr>
-        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
+        <th colSpan={1} class="px-6 py-3 text-center text-lg font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
           Items
         </th>
-        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
+        <th colSpan={1} class="px-6 py-3 text-center text-lg font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
           Operations
         </th>
       </tr>
@@ -180,10 +180,10 @@ export default function ItemsManager() {
         </th>
       </tr>
       <tr>
-        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
+        <th colSpan={1} class="px-6 py-3 text-center text-lg font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
           Items
         </th>
-        <th colSpan={1} class="px-6 py-3 text-center text-base font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
+        <th colSpan={1} class="px-6 py-3 text-center text-lg font-semibold text-gray-500 font-plexserif tracking-wider w-1/2">
           Operations
         </th>
       </tr>
