@@ -40,17 +40,19 @@ export default function ItemsManager() {
         // console.log(arrObj);
     }
 
-    async function deleteItem(id,category)
+    async function deleteItem(id,category,item)
     {
       if(window.confirm("Are you sure you want to delete this item?")===false)
       {
         return;
       }
-      const itemobjArry=mArry.filter((obj)=>obj._id===id);
+      const obj={
+        itemname:item,
+        objid:id
+      }
       const leftItemsArry=mArry.filter((obj)=>obj._id!==id);
       const url=baseURL+"/users/delete-item";
-      console.log(itemobjArry[0]);
-      const serverMsg=await axios.post(url,itemobjArry[0]);
+      const serverMsg=await axios.post(url,obj);
       if(serverMsg.data.status===true)
       {
         if(serverMsg.data.response===1)
@@ -100,7 +102,7 @@ export default function ItemsManager() {
             {str}
         </td>
         <td class="px-6 py-4 whitespace-nowrap w-1/2 text-center">
-            {state&&<button type='button' class="btn btn-warning text-center p-1 pb-1" onClick={()=>{props.deletefx(props._id,props.category)}}>Delete</button>}
+            {state&&<button type='button' class="btn btn-warning text-center p-1 pb-1" onClick={()=>{props.deletefx(props._id,props.category,str)}}>Delete</button>}
         </td>
       </tr>
           )
@@ -121,7 +123,7 @@ export default function ItemsManager() {
         </div>
     </div>
     <div className='flex'>
-    <div class="overflow-x-auto container">
+    <div class="overflow-hidden container">
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
       <tr>
@@ -146,7 +148,7 @@ export default function ItemsManager() {
   </table>
 </div>
    
-<div class="overflow-x-auto container">
+<div class="overflow-hidden container">
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
     <tr>
@@ -171,7 +173,7 @@ export default function ItemsManager() {
   </table>
 </div>
 
-<div class="overflow-x-auto container">
+<div class="overflow-hidden container">
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
     <tr>
