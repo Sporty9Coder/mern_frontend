@@ -90,6 +90,7 @@ export default function ItemsManager() {
     function ItemTable(props)
 {
   console.log(props.item);
+  if (props.item && props.item.length > 0){
     return (
       props.item.map(
         (str)=>{
@@ -105,7 +106,7 @@ export default function ItemsManager() {
           )
         }
       )
-    )
+    )}
 }
 
   return (
