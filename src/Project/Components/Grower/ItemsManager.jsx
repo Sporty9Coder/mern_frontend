@@ -120,14 +120,11 @@ export default function ItemsManager() {
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
       <tr>
-        <th colSpan={3} class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <th colSpan={2} class="px-6 py-3 text-center text-lg font-semibold text-black tracking-wider">
           Milk Products
         </th>
       </tr>
       <tr>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Category
-        </th>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Item
         </th>
@@ -148,14 +145,11 @@ export default function ItemsManager() {
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
     <tr>
-        <th colSpan={3} class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <th colSpan={2} class="px-6 py-3 text-center text-lg font-semibold text-black tracking-wider">
           Fruits
         </th>
       </tr>
       <tr>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Category
-        </th>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Item
         </th>
@@ -176,14 +170,11 @@ export default function ItemsManager() {
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
     <tr>
-        <th colSpan={3} class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <th colSpan={2} class="px-6 py-3 text-center text-lg font-semibold text-black tracking-wider">
           Vegetables
         </th>
       </tr>
       <tr>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          Category
-        </th>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Item
         </th>
