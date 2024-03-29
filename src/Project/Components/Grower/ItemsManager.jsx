@@ -95,9 +95,6 @@ export default function ItemsManager() {
     <thead class="bg-gray-50">
       <tr>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-          ObjId
-        </th>
-        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Category
         </th>
         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -110,9 +107,6 @@ export default function ItemsManager() {
     </thead>
     <tbody class="bg-white divide-y divide-gray-200">
       <tr>
-        <td class="px-6 py-4 whitespace-nowrap">
-            {props._id}
-        </td>
         <td class="px-6 py-4 whitespace-nowrap">
             {props.category}
         </td>
