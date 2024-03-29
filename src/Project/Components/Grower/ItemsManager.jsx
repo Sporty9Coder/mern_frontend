@@ -120,7 +120,7 @@ export default function ItemsManager() {
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
       <tr>
-        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <th colSpan={3} class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Milk Products
         </th>
       </tr>
@@ -148,7 +148,7 @@ export default function ItemsManager() {
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
     <tr>
-        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <th colSpan={3} class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Fruits
         </th>
       </tr>
@@ -176,7 +176,7 @@ export default function ItemsManager() {
   <table class="table-auto min-w-full divide-y divide-gray-200">
     <thead class="bg-gray-50">
     <tr>
-        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <th colSpan={3} class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
           Vegetables
         </th>
       </tr>
