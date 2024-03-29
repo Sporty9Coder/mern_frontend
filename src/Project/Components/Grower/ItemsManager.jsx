@@ -50,32 +50,40 @@ export default function ItemsManager() {
         itemname:item,
         objid:id
       }
-      const leftItemsArry=mArry.filter((obj)=>obj._id!==id);
+      var leftItemsArry=[];
+
+      if(category==="Milk Product")
+      {
+        leftItemsArry=mArry.filter((obj)=>obj._id!==id);
+      }
+      else if(category==="Fruits")
+      {
+        leftItemsArry=fArry.filter((obj)=>obj._id!==id);
+      }
+      else if(category==="Vegetables")
+      {
+        leftItemsArry=vArry.filter((obj)=>obj._id!==id);
+      }
+      
       const url=baseURL+"/users/delete-item";
       const serverMsg=await axios.post(url,obj);
       if(serverMsg.data.status===true)
       {
-        if(serverMsg.data.response===1)
-        {
           if(category==="Milk Product")
           {
-            setmArry(leftItemsArry);
+            setmArry([...leftItemsArry,serverMsg.data.res[0]]);
           }
           else if(category==="Fruits")
           {
-            setfArry(leftItemsArry);
+            setfArry([...leftItemsArry,serverMsg.data.res[0]]);
           }
           else if(category==="Vegetables")
           {
-            setvArry(leftItemsArry);
+            setvArry([...leftItemsArry,serverMsg.data.res[0]]);
           }
-        }
-        else {
-          alert(serverMsg.data.msg);
-        }
       }
       else {
-        alert(serverMsg.data.err);
+        alert(serverMsg.data.error);
       }
     }
 
