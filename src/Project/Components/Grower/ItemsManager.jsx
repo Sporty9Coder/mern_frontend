@@ -72,13 +72,14 @@ export default function ItemsManager() {
       console.log(serverMsg.data.res);
       if(serverMsg.data.status===true)
       {
+          alert(serverMsg.data.deleteditem+" deleted for "+serverMsg.data.res.email);
           if(category==="Milk Product")
           {
-            setmArry([...leftItemsArry,serverMsg.data.res[0]]);
+            setmArry([...leftItemsArry,serverMsg.data.res]);
           }
           else if(category==="Fruits")
           {
-            setfArry([...leftItemsArry,serverMsg.data.res[0]]);
+            setfArry([...leftItemsArry,serverMsg.data.res]);
           }
           else if(category==="Vegetables")
           {
