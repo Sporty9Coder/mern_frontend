@@ -64,10 +64,6 @@ export default function StartPage() {
         return classes.filter(Boolean).join(' ');
     }
 
-    function gotoHomePage()
-    {
-        navigate("/gotoHomePage");
-    }
 
     return (
         <>
@@ -75,7 +71,7 @@ export default function StartPage() {
                 <button className='ml-2 h-12 w-10 mt-2'>
                     <img src="https://static.thenounproject.com/png/462023-200.png" alt="" />
                 </button>
-                <button className='ml-2 mt-2 h-12 w-1/4 sm:w-72 hover:bg-black hover:rounded-lg hover:bg-opacity-60 font-serif text-2xl' onClick={gotoHomePage}>Categories</button>
+                <button className='ml-2 mt-2 h-12 w-1/4 sm:w-72 hover:bg-black hover:rounded-lg hover:bg-opacity-60 font-serif text-2xl'>Categories</button>
                 <button className='ml-2 mt-2 h-12 w-1/4 sm:w-72 hover:bg-black hover:rounded-lg hover:bg-opacity-60 font-serif text-2xl'>Products</button>
                 <button className='ml-2 mt-2 h-12 w-1/4 sm:w-72 hover:bg-black hover:rounded-lg hover:bg-opacity-60 font-serif text-2xl'>Services</button>
                 <div className='ml-2 mt-2 h-12 w-72'></div>

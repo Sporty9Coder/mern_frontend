@@ -37,7 +37,12 @@ export default function HomePage() {
 
     function classNames(...classes) {
       return classes.filter(Boolean).join(' ')
-    }    
+    }   
+    
+    function gotoHomePage()
+    {
+        navigate("/gotoHomePage");
+    }
 
     console.log(location);
     const rendernavbar=location.pathname!=='/'&&location.pathname!=='/gotohome';
@@ -48,7 +53,7 @@ export default function HomePage() {
         <button className='ml-2 h-12 w-10 mt-2'>
           <img src="https://static.thenounproject.com/png/462023-200.png" alt="" />
         </button>
-        <button className='ml-2 mt-2 h-12 w-72 hover:bg-green-950 hover:rounded-lg hover:bg-opacity-50'>Categories</button>
+        <button className='ml-2 mt-2 h-12 w-72 hover:bg-green-950 hover:rounded-lg hover:bg-opacity-50' onClick={gotoHomePage}>Categories</button>
         <button className='ml-2 mt-2 h-12 w-72 hover:bg-green-950 hover:rounded-lg hover:bg-opacity-50'>Products</button>
         <button className='ml-2 mt-2 h-12 w-72 hover:bg-green-950 hover:rounded-lg hover:bg-opacity-50 peer-hover:'>Services</button>
         <div className='ml-2 mt-2 h-12 w-72'></div>
