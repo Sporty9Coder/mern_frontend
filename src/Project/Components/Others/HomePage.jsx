@@ -108,6 +108,7 @@ export default function HomePage() {
 
         <Routes>
           <Route path='/' element={<StartPage/>}></Route>
+          <Route path='/gotoHomePage' element={<StartPage/>}></Route>
           <Route path='/gotosignup' element={<SignUp/>}></Route>
           <Route path='/gotoLogin' element={<Login/>}></Route>
           <Route path='/growerdash' element={<GrowerDash/>}></Route>
