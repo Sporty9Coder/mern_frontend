@@ -45,7 +45,7 @@ export default function HomePage() {
     }
 
     console.log(location);
-    const rendernavbar=location.pathname!=='/'&&location.pathname!=='/gotohome';
+    const rendernavbar=location.pathname!=='/'&&location.pathname!=='/gotohome'&&location.pathname!=='/gotoHomePage';
 
     return (
       <>
