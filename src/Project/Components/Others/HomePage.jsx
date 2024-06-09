@@ -123,6 +123,7 @@ export default function HomePage() {
           <Route path='/gotoItemManager' element={<ItemsManager/>}></Route>
           <Route path='/gotohome' element={<StartPage/>}></Route>
           <Route path='/fetchgrower' element={<FetchGrower/>}></Route>
+          <Route path='/gotogrowerProfile' element={<GrowerProfile/>}></Route>
           <Route path='*' element={<PageNotFound/>}></Route>
         </Routes>
         </>

@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Routes,Route, useNavigate } from 'react-router-dom';
 import SignUp from './SignUp.jsx';
+import { baseURL } from '../../../services/axios.config.js';
 
 export default function Login() {
     const [obj,setObj]=useState({
@@ -19,7 +20,7 @@ export default function Login() {
 
     async function doLogin()
     {
-        const url="https://mern-project-wnyo.onrender.com/users/login"
+        const url=baseURL+"/users/login"
         const serverMsg=await axios.post(url,obj);
         if(serverMsg.data.status===true)
         {

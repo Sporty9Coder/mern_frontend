@@ -27,7 +27,6 @@ export default function Example() {
     }
 
     async function doSaveWithAxios() {
-        const url = `${baseURL}/users/add-grower`;
         const formdata = new FormData();
         for (var props in growerobj) {
             formdata.append(props, growerobj[props]);

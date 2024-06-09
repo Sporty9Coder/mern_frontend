@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Login from './Login.jsx';
+import { baseURL } from '../../../services/axios.config.js';
 
 export default function SignUp() {
 
@@ -25,7 +26,7 @@ export default function SignUp() {
 
   async function signUp() {
     // alert("hello");
-    const url = "https://mern-project-wnyo.onrender.com/users/signup";
+    const url = baseURL+"/users/signup";
     const serverMsg = await axios.post(url, signUpobj);
     if (serverMsg.data.status === true) {
       alert("signed in successfully");

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 
@@ -18,6 +18,7 @@ export default function GrowerDash() {
     }
 
     return (
+        <>
         <div className='flex justify-center mt-14'>
             <div className='flex flex-col md:flex-row md:space-x-4 lg:flex-row lg:space-x-4'>
                 <Card style={{ width: '18rem', margin: '20px', border: '0px', height: '100%' }}>
@@ -40,5 +41,6 @@ export default function GrowerDash() {
                 </Card>
             </div>
         </div>
+        </>
     )
 }

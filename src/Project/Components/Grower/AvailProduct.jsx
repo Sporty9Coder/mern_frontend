@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import { doPublishValidatetoken } from '../../../services/user-controller';
+import { useNavigate } from 'react-router-dom';
 
 function ItemList(props)
 {
@@ -30,6 +31,7 @@ export default function AvailProduct() {
 
     const [index,setIndex]=useState(-1);
     const [changeCategory,setChangeCategory]=useState(false);
+    const navigate=useNavigate();
 
 
     function doUpdate(event)
@@ -48,18 +50,32 @@ export default function AvailProduct() {
 
     async function doPublish()
     {
-        const serverMsg= doPublishValidatetoken(obj);
+        const serverMsg= await doPublishValidatetoken(obj);
         console.log(obj);
         // console.log(formdata);
-        console.log((await serverMsg).data.status);
-        if((await serverMsg).data.status===true)
+        console.log(serverMsg.data.status);
+        if(serverMsg.data.status===true)
         {
         //   alert("item added");
-        //   alert(serverMsg.data.city);   
-          setObj({...obj,["city"]:(await serverMsg).data.city});
+        //   alert(serverMsg.data.city); 
+        if(serverMsg.data.message===0)
+            {
+                alert("kindly fill your profile");
+                navigate("/gotogrowerProfile");
+            } 
+        else if(serverMsg.data.res.city==="")
+            {
+                alert("kindly fill your city in profile");
+                navigate("/gotogrowerProfile");
+            }
+        else setObj({...obj,["city"]:serverMsg.data.city});
         }
         else {
-          alert((await serverMsg).data.err+" "+(await serverMsg).data.message);
+          alert(serverMsg.data.error);
+          if(serverMsg.data.emptyProfile===true)
+            {
+                navigate("/gotogrowerProfile");
+            }
         }
     }
 
