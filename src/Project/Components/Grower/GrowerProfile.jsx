@@ -34,6 +34,7 @@ export default function Example() {
         const serverMsg = await doSaveWithAxiosPost(formdata);
 
         if (serverMsg.data.status === true) {
+            alert("signed in successfully");
             setPrevImg("https://mern-project-wnyo.onrender.com/uploads/" + serverMsg.data.res.picpath);
         } else {
             alert(serverMsg.data.msg + " " + serverMsg.data.err);
